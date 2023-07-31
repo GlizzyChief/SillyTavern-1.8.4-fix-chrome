@@ -3,6 +3,8 @@
 This is a patched version of SillyTavern 1.8.4 which adds support for Poe using selenium webdriver.
 It can be used the same way as SillyTavern 1.8.4. Just input your p-b cookie and have a blast!
 
+NOTE: this is an alternate version of the fix, using chrome instead of firefox. Please use it if the firefox version doesn't work for you.
+
 # Instructions
 
 NOTE: Please select ChatPGT as the model. Choosing Assistant automatically switches to ChatGPT, but still please do so manually.
@@ -15,8 +17,8 @@ If you've never ran SillyTavern, run:
 
 To install, run the following commands in Termux:
 - pkg install x11-repo
-- pkg install firefox
-- pkg install geckodriver
+- pkg install tur-repo
+- pkg instal chromium
 - pkg install libexpat
 - git clone https://github.com/GlizzyChief/SillyTavern-1.8.4-fix
 - cd SillyTavern-1.8.4-fix
