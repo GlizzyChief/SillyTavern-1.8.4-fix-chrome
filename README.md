@@ -30,7 +30,7 @@ If start.sh causes issues, then please run:
 
 
 ## Windows
-For using on Windows, simply make sure to install firefox and geckodriver.
+For using on Windows, simply make sure to install chrome/chromium and chromedriver.
 Then, download the project either as .zip or using git (same as above)
 Afterwards, simply run start.bat
 
@@ -39,15 +39,15 @@ Afterwards, simply run start.bat
 For any other operating systems, please contact me
 
 ## Known issues
-- Streaming responses and suggestion currently don't work.
-- Refreshing the browser doesn't stop the existing selenium instance from running. If your browser tab crashes, or you need to refresh the page for any reason, please restart the application.
-- Performance depends somewhat on the device, currently averaging 22 seconds on PC and varies somewhat on mobile. However, due to selenium issues, it seems that at least 2 GBs of RAM are needed to run smoothly. Currently looking into a way to fix it.
+- Streaming responses and suggestions currently don't work.
 
 ## Recent fixes
 - Fixed issues with characters responding with '{'reply': 'some text'}'
 - Fixed characters responding with unfinished messages or triple dots
 - Fixed issues caused by Poe putting an ad modal when opening some bots
 - Temporarily fixed issues with Assistant by simply using ChatGPT instead
+- Managed to get it running on low-end phones via using chromium
+- Fixed sending chunked messages when using large context window
 
 ## Contact
 Please drop me a message on [Matrix](https://matrix.to/#/@glizzychief:catgirl.cloud) or Discord (glizzychief#1048) if you have any questions or just want to say hi.
