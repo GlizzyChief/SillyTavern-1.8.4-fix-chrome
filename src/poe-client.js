@@ -1,5 +1,5 @@
 const { Builder, Browser, By, Key, until, Actions } = require('selenium-webdriver');
-const { Options } = require('selenium-webdriver/firefox');
+const { Options } = require('selenium-webdriver/chrome.js');
 const { NodeHtmlMarkdown } = require('node-html-markdown');
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
@@ -22,13 +22,13 @@ class PoeClient {
     }
 
     async initializeDriver() {
-
+        
         let options = new Options();
-        options.addArguments("--headless");
+        options.addArguments("--headless=new");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        this.driver = await new Builder().forBrowser(Browser.CHROME).setChromeOptions(options).build();
 
-
-        // Awaits are used as an attempt to avoid crashing on low-end devices.
-        this.driver = await new Builder().forBrowser(Browser.FIREFOX).setFirefoxOptions(options).build();
         await this.driver.get('https://poe.com');
         await delay(1000);
         await this.driver.manage().addCookie({ name: 'p-b', value: this.poeCookie });
