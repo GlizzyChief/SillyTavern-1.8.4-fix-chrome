@@ -84,7 +84,7 @@ class PoeClient {
             await this.driver.executeScript(`document.querySelector('textarea').value = arguments[0]`, message);
             //await inputForm.sendKeys(message);
             
-            console.log(message.replace('"', '\\"'))
+            //console.log(message.replace('"', '\\"'))
 
             await delay(20);
 
